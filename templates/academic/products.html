@@ -1,0 +1,61 @@
+{% extends 'academic/base.html' %}
+{% block title %}Tours | Cruzattour{% endblock %}
+{% block content %}
+<section class="hero py-5 mb-4">
+    <div class="container">
+        <p class="text-uppercase small mb-2">Cruzattour</p>
+        <h1 class="display-6 fw-bold">Nuestros tours</h1>
+        <p class="lead mb-0">Elige tu proxima experiencia por Chile.</p>
+    </div>
+</section>
+<div class="container pb-5">
+    <div id="status" class="alert alert-info">Cargando productos...</div>
+    <div id="products-grid" class="row g-4"></div>
+</div>
+<script>
+const money = value => `$${Number(value).toLocaleString('es-CL')}`;
+const cart = JSON.parse(localStorage.getItem('nexo-cart') || '[]');
+
+function updateCartCount() {
+    document.querySelector('#cart-count').textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+}
+
+function addToCart(product) {
+    const existing = cart.find(item => item.id === product.id);
+    if (existing) existing.quantity += 1;
+    else cart.push({id: product.id, name: product.name, price: product.price, quantity: 1});
+    localStorage.setItem('nexo-cart', JSON.stringify(cart));
+    updateCartCount();
+}
+
+async function loadProducts() {
+    const response = await fetch('/api/products/');
+    if (!response.ok) throw new Error('No se pudo cargar el catalogo');
+    const products = await response.json();
+    document.querySelector('#products-grid').innerHTML = products.map(product => `
+        <div class="col-md-6 col-lg-3">
+            <article class="card product-card h-100 shadow-sm">
+                <div class="product-mark">${product.category === 'Cordillera' ? '⛰' : product.category === 'Costa' ? '🌊' : product.category === 'Cultura' ? '📖' : '🧭'}</div>
+                <div class="card-body d-flex flex-column">
+                    <span class="text-success small fw-semibold">${product.category}</span>
+                    <h2 class="h5 mt-2">${product.name}</h2>
+                    <p class="text-secondary small flex-grow-1">${product.description}</p>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <strong class="fs-5">${money(product.price)}</strong>
+                        <small class="text-secondary">${product.stock} disponibles</small>
+                    </div>
+                    <button class="btn btn-success w-100" onclick='addToCart(${JSON.stringify(product)})' ${product.stock === 0 ? 'disabled' : ''}>Agregar tour</button>
+                </div>
+            </article>
+        </div>`).join('');
+    document.querySelector('#status').className = 'alert alert-success';
+    document.querySelector('#status').textContent = `${products.length} tours disponibles`;
+}
+
+updateCartCount();
+loadProducts().catch(error => {
+    document.querySelector('#status').className = 'alert alert-danger';
+    document.querySelector('#status').textContent = error.message;
+});
+</script>
+{% endblock %}

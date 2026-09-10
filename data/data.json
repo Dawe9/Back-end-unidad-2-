@@ -1,0 +1,96 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Tour Farellones y Valle Nevado",
+      "description": "Tour panoramico full day por Farellones y Valle Nevado.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera"
+    },
+    {
+      "id": 2,
+      "name": "Tour Safari de Rancagua",
+      "description": "Experiencia safari y recorrido turistico por Rancagua.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Aventura"
+    },
+    {
+      "id": 3,
+      "name": "Tour Valparaiso y Vina del Mar",
+      "description": "Tour panoramico por Valparaiso y Vina del Mar.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Costa"
+    },
+    {
+      "id": 4,
+      "name": "Tour Portillo",
+      "description": "Tour panoramico por Portillo y sus paisajes cordilleranos.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Cordillera"
+    },
+    {
+      "id": 5,
+      "name": "Tour Panoramicos de los Poetas",
+      "description": "Recorrido cultural por la ruta de los poetas y Vina Undurraga.",
+      "price": 50000,
+      "stock": 20,
+      "category": "Cultura"
+    },
+    {
+      "id": 6,
+      "name": "Parque Farellones Full Day",
+      "description": "Jornada completa de aventura y nieve en Parque Farellones.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera"
+    },
+    {
+      "id": 7,
+      "name": "Tour Panoramico Farellones y El Colorado",
+      "description": "Tour fotografico por Farellones y el centro de montana El Colorado.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera"
+    },
+    {
+      "id": 8,
+      "name": "Tour Full Day Valle Nevado",
+      "description": "Disfruta todo el dia de los paisajes y la nieve de Valle Nevado.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Cordillera"
+    }
+  ],
+  "orders": [
+    {
+      "customer_name": "Ana Perez",
+      "customer_email": "ana@example.com",
+      "items": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "total": 39990,
+      "id": 1,
+      "status": "recibida"
+    },
+    {
+      "customer_name": "Ana Perez",
+      "customer_email": "ana@example.com",
+      "items": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "total": 39990,
+      "id": 2,
+      "status": "recibida"
+    }
+  ]
+}
