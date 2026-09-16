@@ -15,6 +15,7 @@ urlpatterns = [
     path('products/', views.products_page, name='products'),
     path('cart/', views.cart_page, name='cart'),
     path('login/', views.login_page, name='login'),
+    path('api/cart/', views.cart_api, name='cart-api'),
     # Endpoints para autenticación JWT.
     path('api/token/', TokenObtainPairView.as_view(), name='token-obtain-pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token-refresh'),

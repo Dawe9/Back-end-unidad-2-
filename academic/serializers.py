@@ -7,10 +7,11 @@ from .models import Order, Product
 
 # Estos serializers trabajan con diccionarios provenientes del archivo JSON.
 class ProductSerializer(serializers.Serializer):
-    """Valida los productos disponibles en la tienda."""
+    """Valida productos disponibles dentro de la tienda del tenant."""
 
     # El campo id se genera automáticamente al crear un nuevo registro.
     id = serializers.IntegerField(read_only=True)
+    tenant = serializers.CharField(max_length=150, read_only=True, required=False)
     name = serializers.CharField(max_length=150)
     description = serializers.CharField(max_length=500)
     price = serializers.IntegerField(min_value=0)
@@ -21,8 +22,9 @@ class ProductSerializer(serializers.Serializer):
 class OrderSerializer(serializers.Serializer):
     """Valida una compra y sus líneas de carrito."""
 
-    # La orden contiene información del cliente y el detalle de los productos comprados.
+    # La orden contiene información del cliente, tenant y detalle de los productos comprados.
     id = serializers.IntegerField(read_only=True)
+    tenant = serializers.CharField(max_length=150, required=False, allow_blank=True)
     customer_name = serializers.CharField(max_length=150)
     customer_email = serializers.EmailField()
     items = serializers.ListField(child=serializers.DictField(), allow_empty=False)

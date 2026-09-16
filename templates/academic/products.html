@@ -3,7 +3,7 @@
 {% block content %}
 <section class="hero py-5 mb-4">
     <div class="container">
-        <p class="text-uppercase small mb-2">Cruzattour</p>
+        <p class="text-uppercase small mb-2" data-tenant-name>Cruzattour</p>
         <h1 class="display-6 fw-bold">Nuestros tours</h1>
         <p class="lead mb-0">Elige tu proxima experiencia por Chile.</p>
     </div>
@@ -16,15 +16,35 @@
 const money = value => `$${Number(value).toLocaleString('es-CL')}`;
 const cart = JSON.parse(localStorage.getItem('nexo-cart') || '[]');
 
+async function persistCartToServer(items) {
+    const token = localStorage.getItem('nexo-access-token');
+    if (!token) return;
+    try {
+        await fetch('/api/cart/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+            body: JSON.stringify({ cart: items })
+        });
+    } catch (error) {
+        console.warn('No se pudo guardar el carrito en el servidor:', error);
+    }
+}
+
 function updateCartCount() {
     document.querySelector('#cart-count').textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
 }
 
 function addToCart(product) {
+    const token = localStorage.getItem('nexo-access-token');
+    if (!token) {
+        window.location.href = '/login/?next=/products/';
+        return;
+    }
     const existing = cart.find(item => item.id === product.id);
     if (existing) existing.quantity += 1;
     else cart.push({id: product.id, name: product.name, price: product.price, quantity: 1});
     localStorage.setItem('nexo-cart', JSON.stringify(cart));
+    persistCartToServer(cart);
     updateCartCount();
 }
 

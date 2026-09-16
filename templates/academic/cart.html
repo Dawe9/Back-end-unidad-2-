@@ -30,6 +30,42 @@
 const money = value => `$${Number(value).toLocaleString('es-CL')}`;
 let cart = JSON.parse(localStorage.getItem('nexo-cart') || '[]');
 
+async function syncCartWithServer() {
+    const token = localStorage.getItem('nexo-access-token');
+    if (!token) return;
+    try {
+        const response = await fetch('/api/cart/', { headers: { Authorization: `Bearer ${token}` } });
+        if (!response.ok) return;
+        const payload = await response.json();
+        if (payload.tenant) {
+            document.querySelectorAll('[data-tenant-name]').forEach(element => {
+                element.textContent = payload.display_name || payload.tenant;
+            });
+            localStorage.setItem('nexo-tenant', payload.tenant);
+            document.documentElement.style.setProperty('--tenant-color', payload.primary_color || '#2f6042');
+        }
+        if (Array.isArray(payload.cart) && payload.cart.length) {
+            cart = payload.cart;
+            localStorage.setItem('nexo-cart', JSON.stringify(cart));
+        }
+    } catch (error) {
+        console.warn('No se pudo sincronizar el carrito del servidor:', error);
+    }
+}
+
+async function saveCart() {
+    localStorage.setItem('nexo-cart', JSON.stringify(cart));
+    const token = localStorage.getItem('nexo-access-token');
+    if (token) {
+        await fetch('/api/cart/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+            body: JSON.stringify({ cart })
+        });
+    }
+    renderCart();
+}
+
 function renderCart() {
     const target = document.querySelector('#cart-items');
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -43,7 +79,6 @@ function renderCart() {
     document.querySelector('#checkout-form button').disabled = !cart.length;
 }
 
-function saveCart() { localStorage.setItem('nexo-cart', JSON.stringify(cart)); renderCart(); }
 function changeQuantity(index, quantity) { cart[index].quantity = Math.max(1, Number(quantity)); saveCart(); }
 function removeItem(index) { cart.splice(index, 1); saveCart(); }
 
@@ -52,8 +87,15 @@ document.querySelector('#checkout-form').addEventListener('submit', async event 
     const status = document.querySelector('#checkout-status');
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const token = localStorage.getItem('nexo-access-token');
-    if (!token) { status.className = 'text-danger'; status.textContent = 'Inicia sesion antes de confirmar la compra.'; return; }
+    const tenant = localStorage.getItem('nexo-tenant') || document.querySelector('#customer-name').value || 'default';
+    if (!token) {
+        status.className = 'text-danger';
+        status.textContent = 'Debes iniciar sesion para confirmar la compra.';
+        window.location.href = '/login/';
+        return;
+    }
     const response = await fetch('/api/orders/', {method: 'POST', headers: {'Content-Type': 'application/json', 'Authorization': `Bearer ${token}`}, body: JSON.stringify({
+        tenant,
         customer_name: document.querySelector('#customer-name').value,
         customer_email: document.querySelector('#customer-email').value,
         items: cart,
@@ -62,12 +104,20 @@ document.querySelector('#checkout-form').addEventListener('submit', async event 
     if (!response.ok) { status.className = 'text-danger'; status.textContent = 'No se pudo registrar la compra.'; return; }
     const order = await response.json();
     cart = [];
-    saveCart();
+    localStorage.setItem('nexo-cart', JSON.stringify(cart));
+    if (token) {
+        await fetch('/api/cart/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
+            body: JSON.stringify({ cart: [] })
+        });
+    }
+    renderCart();
     status.className = 'text-success';
     status.textContent = `Compra confirmada. Numero de pedido: #${order.id}`;
     event.target.reset();
 });
 
-renderCart();
+syncCartWithServer().finally(() => renderCart());
 </script>
 {% endblock %}

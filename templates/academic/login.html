@@ -27,6 +27,18 @@ document.querySelector('#login-form').addEventListener('submit', async event => 
     const tokens = await response.json();
     localStorage.setItem('nexo-access-token', tokens.access);
     localStorage.setItem('nexo-refresh-token', tokens.refresh);
+
+    const userCartResponse = await fetch('/api/cart/', {
+        headers: { Authorization: `Bearer ${tokens.access}` }
+    });
+    if (userCartResponse.ok) {
+        const payload = await userCartResponse.json();
+        localStorage.setItem('nexo-tenant', payload.tenant || 'default');
+        localStorage.setItem('nexo-cart', JSON.stringify(payload.cart || []));
+    } else {
+        localStorage.setItem('nexo-cart', JSON.stringify([]));
+    }
+
     window.location.href = '/';
 });
 </script>

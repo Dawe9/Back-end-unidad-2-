@@ -5,8 +5,9 @@
       "name": "Tour Farellones y Valle Nevado",
       "description": "Tour panoramico full day por Farellones y Valle Nevado.",
       "price": 30000,
-      "stock": 20,
-      "category": "Cordillera"
+      "stock": 18,
+      "category": "Cordillera",
+      "tenant": "Cruzattour"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "description": "Experiencia safari y recorrido turistico por Rancagua.",
       "price": 45000,
       "stock": 20,
-      "category": "Aventura"
+      "category": "Aventura",
+      "tenant": "Cruzattour"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "description": "Tour panoramico por Valparaiso y Vina del Mar.",
       "price": 35000,
       "stock": 20,
-      "category": "Costa"
+      "category": "Costa",
+      "tenant": "Cruzattour"
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "description": "Tour panoramico por Portillo y sus paisajes cordilleranos.",
       "price": 45000,
       "stock": 20,
-      "category": "Cordillera"
+      "category": "Cordillera",
+      "tenant": "Cruzattour"
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "description": "Recorrido cultural por la ruta de los poetas y Vina Undurraga.",
       "price": 50000,
       "stock": 20,
-      "category": "Cultura"
+      "category": "Cultura",
+      "tenant": "Cruzattour"
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "description": "Jornada completa de aventura y nieve en Parque Farellones.",
       "price": 30000,
       "stock": 20,
-      "category": "Cordillera"
+      "category": "Cordillera",
+      "tenant": "Cruzattour"
     },
     {
       "id": 7,
@@ -54,7 +60,8 @@
       "description": "Tour fotografico por Farellones y el centro de montana El Colorado.",
       "price": 30000,
       "stock": 20,
-      "category": "Cordillera"
+      "category": "Cordillera",
+      "tenant": "Cruzattour"
     },
     {
       "id": 8,
@@ -62,7 +69,512 @@
       "description": "Disfruta todo el dia de los paisajes y la nieve de Valle Nevado.",
       "price": 35000,
       "stock": 20,
-      "category": "Cordillera"
+      "category": "Cordillera",
+      "tenant": "Cruzattour"
+    },
+    {
+      "id": 9,
+      "name": "Tour Farellones y Valle Nevado",
+      "description": "Tour panoramico full day por Farellones y Valle Nevado.",
+      "price": 30000,
+      "stock": 18,
+      "category": "Cordillera",
+      "tenant": "Maxi Tours"
+    },
+    {
+      "id": 10,
+      "name": "Tour Safari de Rancagua",
+      "description": "Experiencia safari y recorrido turistico por Rancagua.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Aventura",
+      "tenant": "Maxi Tours"
+    },
+    {
+      "id": 11,
+      "name": "Tour Valparaiso y Vina del Mar",
+      "description": "Tour panoramico por Valparaiso y Vina del Mar.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Costa",
+      "tenant": "Maxi Tours"
+    },
+    {
+      "id": 12,
+      "name": "Tour Portillo",
+      "description": "Tour panoramico por Portillo y sus paisajes cordilleranos.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "Maxi Tours"
+    },
+    {
+      "id": 13,
+      "name": "Tour Panoramicos de los Poetas",
+      "description": "Recorrido cultural por la ruta de los poetas y Vina Undurraga.",
+      "price": 50000,
+      "stock": 20,
+      "category": "Cultura",
+      "tenant": "Maxi Tours"
+    },
+    {
+      "id": 14,
+      "name": "Parque Farellones Full Day",
+      "description": "Jornada completa de aventura y nieve en Parque Farellones.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "Maxi Tours"
+    },
+    {
+      "id": 15,
+      "name": "Tour Panoramico Farellones y El Colorado",
+      "description": "Tour fotografico por Farellones y el centro de montana El Colorado.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "Maxi Tours"
+    },
+    {
+      "id": 16,
+      "name": "Tour Full Day Valle Nevado",
+      "description": "Disfruta todo el dia de los paisajes y la nieve de Valle Nevado.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "Maxi Tours"
+    },
+    {
+      "id": 17,
+      "name": "Tour Farellones y Valle Nevado",
+      "description": "Tour panoramico full day por Farellones y Valle Nevado.",
+      "price": 30000,
+      "stock": 16,
+      "category": "Cordillera",
+      "tenant": "buyer"
+    },
+    {
+      "id": 18,
+      "name": "Tour Safari de Rancagua",
+      "description": "Experiencia safari y recorrido turistico por Rancagua.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Aventura",
+      "tenant": "buyer"
+    },
+    {
+      "id": 19,
+      "name": "Tour Valparaiso y Vina del Mar",
+      "description": "Tour panoramico por Valparaiso y Vina del Mar.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Costa",
+      "tenant": "buyer"
+    },
+    {
+      "id": 20,
+      "name": "Tour Portillo",
+      "description": "Tour panoramico por Portillo y sus paisajes cordilleranos.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "buyer"
+    },
+    {
+      "id": 21,
+      "name": "Tour Panoramicos de los Poetas",
+      "description": "Recorrido cultural por la ruta de los poetas y Vina Undurraga.",
+      "price": 50000,
+      "stock": 20,
+      "category": "Cultura",
+      "tenant": "buyer"
+    },
+    {
+      "id": 22,
+      "name": "Parque Farellones Full Day",
+      "description": "Jornada completa de aventura y nieve en Parque Farellones.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "buyer"
+    },
+    {
+      "id": 23,
+      "name": "Tour Panoramico Farellones y El Colorado",
+      "description": "Tour fotografico por Farellones y el centro de montana El Colorado.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "buyer"
+    },
+    {
+      "id": 24,
+      "name": "Tour Full Day Valle Nevado",
+      "description": "Disfruta todo el dia de los paisajes y la nieve de Valle Nevado.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "buyer"
+    },
+    {
+      "id": 25,
+      "name": "Tour Farellones y Valle Nevado",
+      "description": "Tour panoramico full day por Farellones y Valle Nevado.",
+      "price": 30000,
+      "stock": 18,
+      "category": "Cordillera",
+      "tenant": "buyer"
+    },
+    {
+      "id": 26,
+      "name": "Tour Safari de Rancagua",
+      "description": "Experiencia safari y recorrido turistico por Rancagua.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Aventura",
+      "tenant": "buyer"
+    },
+    {
+      "id": 27,
+      "name": "Tour Valparaiso y Vina del Mar",
+      "description": "Tour panoramico por Valparaiso y Vina del Mar.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Costa",
+      "tenant": "buyer"
+    },
+    {
+      "id": 28,
+      "name": "Tour Portillo",
+      "description": "Tour panoramico por Portillo y sus paisajes cordilleranos.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "buyer"
+    },
+    {
+      "id": 29,
+      "name": "Tour Panoramicos de los Poetas",
+      "description": "Recorrido cultural por la ruta de los poetas y Vina Undurraga.",
+      "price": 50000,
+      "stock": 20,
+      "category": "Cultura",
+      "tenant": "buyer"
+    },
+    {
+      "id": 30,
+      "name": "Parque Farellones Full Day",
+      "description": "Jornada completa de aventura y nieve en Parque Farellones.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "buyer"
+    },
+    {
+      "id": 31,
+      "name": "Tour Panoramico Farellones y El Colorado",
+      "description": "Tour fotografico por Farellones y el centro de montana El Colorado.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "buyer"
+    },
+    {
+      "id": 32,
+      "name": "Tour Full Day Valle Nevado",
+      "description": "Disfruta todo el dia de los paisajes y la nieve de Valle Nevado.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "buyer"
+    },
+    {
+      "id": 33,
+      "name": "Tour Farellones y Valle Nevado",
+      "description": "Tour panoramico full day por Farellones y Valle Nevado.",
+      "price": 30000,
+      "stock": 16,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 34,
+      "name": "Tour Safari de Rancagua",
+      "description": "Experiencia safari y recorrido turistico por Rancagua.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Aventura",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 35,
+      "name": "Tour Valparaiso y Vina del Mar",
+      "description": "Tour panoramico por Valparaiso y Vina del Mar.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Costa",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 36,
+      "name": "Tour Portillo",
+      "description": "Tour panoramico por Portillo y sus paisajes cordilleranos.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 37,
+      "name": "Tour Panoramicos de los Poetas",
+      "description": "Recorrido cultural por la ruta de los poetas y Vina Undurraga.",
+      "price": 50000,
+      "stock": 20,
+      "category": "Cultura",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 38,
+      "name": "Parque Farellones Full Day",
+      "description": "Jornada completa de aventura y nieve en Parque Farellones.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 39,
+      "name": "Tour Panoramico Farellones y El Colorado",
+      "description": "Tour fotografico por Farellones y el centro de montana El Colorado.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 40,
+      "name": "Tour Full Day Valle Nevado",
+      "description": "Disfruta todo el dia de los paisajes y la nieve de Valle Nevado.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 41,
+      "name": "Tour Farellones y Valle Nevado",
+      "description": "Tour panoramico full day por Farellones y Valle Nevado.",
+      "price": 30000,
+      "stock": 18,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 42,
+      "name": "Tour Safari de Rancagua",
+      "description": "Experiencia safari y recorrido turistico por Rancagua.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Aventura",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 43,
+      "name": "Tour Valparaiso y Vina del Mar",
+      "description": "Tour panoramico por Valparaiso y Vina del Mar.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Costa",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 44,
+      "name": "Tour Portillo",
+      "description": "Tour panoramico por Portillo y sus paisajes cordilleranos.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 45,
+      "name": "Tour Panoramicos de los Poetas",
+      "description": "Recorrido cultural por la ruta de los poetas y Vina Undurraga.",
+      "price": 50000,
+      "stock": 20,
+      "category": "Cultura",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 46,
+      "name": "Parque Farellones Full Day",
+      "description": "Jornada completa de aventura y nieve en Parque Farellones.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 47,
+      "name": "Tour Panoramico Farellones y El Colorado",
+      "description": "Tour fotografico por Farellones y el centro de montana El Colorado.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 48,
+      "name": "Tour Full Day Valle Nevado",
+      "description": "Disfruta todo el dia de los paisajes y la nieve de Valle Nevado.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 49,
+      "name": "Tour Farellones y Valle Nevado",
+      "description": "Tour panoramico full day por Farellones y Valle Nevado.",
+      "price": 30000,
+      "stock": 18,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 50,
+      "name": "Tour Safari de Rancagua",
+      "description": "Experiencia safari y recorrido turistico por Rancagua.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Aventura",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 51,
+      "name": "Tour Valparaiso y Vina del Mar",
+      "description": "Tour panoramico por Valparaiso y Vina del Mar.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Costa",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 52,
+      "name": "Tour Portillo",
+      "description": "Tour panoramico por Portillo y sus paisajes cordilleranos.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 53,
+      "name": "Tour Panoramicos de los Poetas",
+      "description": "Recorrido cultural por la ruta de los poetas y Vina Undurraga.",
+      "price": 50000,
+      "stock": 20,
+      "category": "Cultura",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 54,
+      "name": "Parque Farellones Full Day",
+      "description": "Jornada completa de aventura y nieve en Parque Farellones.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 55,
+      "name": "Tour Panoramico Farellones y El Colorado",
+      "description": "Tour fotografico por Farellones y el centro de montana El Colorado.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 56,
+      "name": "Tour Full Day Valle Nevado",
+      "description": "Disfruta todo el dia de los paisajes y la nieve de Valle Nevado.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 57,
+      "name": "Tour Farellones y Valle Nevado",
+      "description": "Tour panoramico full day por Farellones y Valle Nevado.",
+      "price": 30000,
+      "stock": 18,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 58,
+      "name": "Tour Safari de Rancagua",
+      "description": "Experiencia safari y recorrido turistico por Rancagua.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Aventura",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 59,
+      "name": "Tour Valparaiso y Vina del Mar",
+      "description": "Tour panoramico por Valparaiso y Vina del Mar.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Costa",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 60,
+      "name": "Tour Portillo",
+      "description": "Tour panoramico por Portillo y sus paisajes cordilleranos.",
+      "price": 45000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 61,
+      "name": "Tour Panoramicos de los Poetas",
+      "description": "Recorrido cultural por la ruta de los poetas y Vina Undurraga.",
+      "price": 50000,
+      "stock": 20,
+      "category": "Cultura",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 62,
+      "name": "Parque Farellones Full Day",
+      "description": "Jornada completa de aventura y nieve en Parque Farellones.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 63,
+      "name": "Tour Panoramico Farellones y El Colorado",
+      "description": "Tour fotografico por Farellones y el centro de montana El Colorado.",
+      "price": 30000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
+    },
+    {
+      "id": 64,
+      "name": "Tour Full Day Valle Nevado",
+      "description": "Disfruta todo el dia de los paisajes y la nieve de Valle Nevado.",
+      "price": 35000,
+      "stock": 20,
+      "category": "Cordillera",
+      "tenant": "tenant_user"
     }
   ],
   "orders": [
@@ -90,6 +602,160 @@
       ],
       "total": 39990,
       "id": 2,
+      "status": "recibida"
+    },
+    {
+      "customer_name": "Ana Perez",
+      "customer_email": "ana@example.com",
+      "items": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "total": 39990,
+      "id": 3,
+      "tenant": "buyer",
+      "status": "recibida"
+    },
+    {
+      "customer_name": "Ana Perez",
+      "customer_email": "ana@example.com",
+      "items": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "total": 39990,
+      "id": 4,
+      "tenant": "buyer",
+      "status": "recibida"
+    },
+    {
+      "customer_name": "Cliente Tenant",
+      "customer_email": "tenant@example.com",
+      "items": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "total": 30000,
+      "id": 5,
+      "tenant": "tenant_user",
+      "status": "recibida"
+    },
+    {
+      "customer_name": "Ana Perez",
+      "customer_email": "ana@example.com",
+      "items": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "total": 39990,
+      "id": 6,
+      "tenant": "buyer",
+      "status": "recibida"
+    },
+    {
+      "customer_name": "Cliente Tenant",
+      "customer_email": "tenant@example.com",
+      "items": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "total": 30000,
+      "id": 7,
+      "tenant": "tenant_user",
+      "status": "recibida"
+    },
+    {
+      "customer_name": "Ana Perez",
+      "customer_email": "ana@example.com",
+      "items": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "total": 39990,
+      "id": 8,
+      "tenant": "buyer",
+      "status": "recibida"
+    },
+    {
+      "customer_name": "Cliente Tenant",
+      "customer_email": "tenant@example.com",
+      "items": [
+        {
+          "id": 1,
+          "quantity": 1
+        }
+      ],
+      "total": 30000,
+      "id": 9,
+      "tenant": "tenant_user",
+      "status": "recibida"
+    },
+    {
+      "customer_name": "Ana Perez",
+      "customer_email": "ana@example.com",
+      "items": [
+        {
+          "id": 17,
+          "quantity": 1
+        }
+      ],
+      "total": 39990,
+      "id": 10,
+      "tenant": "buyer",
+      "status": "recibida"
+    },
+    {
+      "customer_name": "Cliente Tenant",
+      "customer_email": "tenant@example.com",
+      "items": [
+        {
+          "id": 33,
+          "quantity": 1
+        }
+      ],
+      "total": 30000,
+      "id": 11,
+      "tenant": "tenant_user",
+      "status": "recibida"
+    },
+    {
+      "customer_name": "Ana Perez",
+      "customer_email": "ana@example.com",
+      "items": [
+        {
+          "id": 17,
+          "quantity": 1
+        }
+      ],
+      "total": 39990,
+      "id": 12,
+      "tenant": "buyer",
+      "status": "recibida"
+    },
+    {
+      "customer_name": "Cliente Tenant",
+      "customer_email": "tenant@example.com",
+      "items": [
+        {
+          "id": 33,
+          "quantity": 1
+        }
+      ],
+      "total": 30000,
+      "id": 13,
+      "tenant": "tenant_user",
       "status": "recibida"
     }
   ]
